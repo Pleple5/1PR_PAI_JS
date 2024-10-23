@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            border: 2px black solid;
+            padding: 20px;
+        }
+        .sekcje33{
+            width: 33%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <section class="sekcje33">
+        <h3>Oblicz koszt paliwa</h3>
+        <label>Rodziaj paliwa (1-benzyna, 2- olej napędowy):<br><input type="number" id="rodzaj"></label>
+        <br>
+        <label>Ile litrów:<br><input type="number" id="ilosc"></label>
+        <br>
+        <button onclick="f1()">OBLICZ</button>
+        <p id="wartosc"></p>
+    </section>
+        
+    <section class="sekcje33">
+        <h2>Dziś promocja na stżyrzenie </h2>
+    </section>
+
+    <section class="sekcje33"></section>
+
+<script type="text/javascript">
+
+    function f1() {
+        let zad11 = parseInt(document.getElementById("rodzaj").value)
+        let zad12 = parseInt(document.getElementById("ilosc").value)
+        let wynik = document.getElementById("wartosc")
+        if (zad11 == 1){
+            let cena11 = 4
+            let cena12 = zad12 * cena11
+            wartosc.innerHTML = "Koszt paliwa wynosi: " + cena12
+        }
+        else if (zad11 == 2){
+            let cena11 = 3.5
+            let cena12 = zad12 * cena11
+            wartosc.innerHTML = "Koszt paliwa wynosi: " + cena12
+        }
+        else{
+            let cena11 = 0
+            let cena12 = zad12 * cena11
+            wartosc.innerHTML = "Koszt paliwa wynosi: " + cena12
+        }
+
+    }
+
+</script>
+</body>
+</html>

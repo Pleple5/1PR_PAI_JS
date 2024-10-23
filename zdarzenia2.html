@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia 2</title>
+</head>
+<body>
+    <br><br>
+    <!-- metoda 1 - przypisanie zdarzenia do znacznika-->
+    <img id="z1" src="https://picsum.photos/200" width=100 onclick='wypiszTekst("Ola ma psa")'>
+    <br>
+    <img id="z2" src="https://picsum.photos/200" width=100 onclick="f2()">
+    <br>
+    <p id="p1">To jest akapit</p>
+    <br>
+    <input type="text" id="t1" valie="" />
+    <p id="paragraf1">Paragraf 1</p>
+    <p id="paragraf2">Paragraf 2</p>
+    <p id="paragraf3">Pokaż wysokość okna</p>
+
+    <script type="text/javascript">
+        // function wypiszTekst(tekst) {
+        //      alert(tekst);
+        // }
+
+        // const wypiszTekst=()=>{
+        //  alert("Brak tekstu");
+        // }
+
+
+        // to jest postać strzałkowa funkcji z lini 23 do 25
+        const wypiszTekst = (tekst) => {
+            alert(tekst)
+        }
+        function f2() {
+            document.getElementById('p1').innerText += " napis"
+            document.getElementById('t1').value = "Napis"
+        }
+
+        function f3() {
+            alert(window.innerHeight)
+        }
+
+        function wypisz() {
+            alert("Ala ma kota")
+        }
+        // --------------- metoda 3 addEventListener----------------------
+        document.addEventListener("click", (event) => {
+            console.log(event.clientX)
+            document.getElementById('paragraf1').innerHTML = "Inny tekst "
+        })
+
+        // --------------- metoda 4 - selekcja elementu + zdarzenia------
+        document.getElementById('paragraf3').onclick = f3 // referencja
+        // --------------------------------------------------------------
+
+        document.getElementById('t1').addEventListener('keypress', function (event) {
+            var klawisz = event.keyCode
+            // console.log(klawisz)
+            // alert(klawisz)
+            document.getElementById('p1').innerHTML += String.fromCharCode(klawisz) + " ";
+        })
+    </script>
+</body>
+</html>

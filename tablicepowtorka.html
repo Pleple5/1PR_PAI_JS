@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+    <style>
+        section{
+            height: 200;
+            padding: 20px;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+
+    <script type="text/javascript">
+        let l1 = Math.floor(Math.random()*100)
+        let l2 = Math.floor((Math.random()*900)+100)
+        let r = Math.floor(Math.random()*255)
+        let g = Math.floor(Math.random()*255)
+        let b = Math.floor(Math.random()*255)
+        let kolor = `rgb(${r}, ${g}, ${b})`
+        
+        let sekcje = document.querySelectorAll("section")
+        sekcje[0].innerHTML = l1
+        sekcje[1].innerHTML = l2
+        sekcje[2].innerHTML += "<img>"
+        sekcje[3].innerHTML += "<img>"
+        sekcje[2].style.background = kolor
+
+        let a = document.querySelectorAll("img")
+        
+        a.forEach ((element) => {
+            element.src = "https://picsum.photos/"+Math.floor((Math.random()*100)+50)
+        })
+        
+    </script>
+</body>
+</html>

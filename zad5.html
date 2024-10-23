@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zad 5</title>
+</head>
+<body>
+    <img src="https://picsum.photos/200">
+    <img src="https://picsum.photos/200">
+    <img src="https://picsum.photos/200">
+    <script>
+        // 3 obrazki pierwsze 2 obrazki otrzymują losową wyskokość z przedziału 100 do 200, trzeci obrazek jest równy wyskością wyższego obrazka z tych pierwszych
+        let zdj = document.querySelectorAll("img")
+        let l1 = Math.floor(Math.random() * 100 + 100)
+        let l2 = Math.floor(Math.random() * 100 + 100)
+
+        zdj[0].height = l1
+        zdj[1].height = l2
+
+        if (l1 > l2){
+            zdj[2].height = l1
+        }
+        else{
+            zdj[2].height = l2
+        }
+    </script>
+</body>
+</html>

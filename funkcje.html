@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script typ="text/javascript">
+        const razyDwa = (a) => {
+                return a*2
+        }
+
+        const dodaj = (p,q,y) => {
+                return p+q+y
+        }
+        
+        function sprawdzCzyParzysta(a)
+        {
+            if(a%2==0) return "parzysta" 
+            else return "nieparzysta"
+        }
+
+        function pokaz()
+        {
+            let c=50;
+            document.write("W funkcji pokaz c="+c+"<br>")
+        }
+
+        let b=12
+        document.write("Liczba="+b+" pomnożona razy 2="+razyDwa(b)+"<br>");
+        document.write("Suma liczb 3,4,5 wynosi "+dodaj (3,4,5)+"<br>")
+        document.write("Liczba 7 jest "+sprawdzCzyParzysta (7)+" a liczba 8 jest "sprawdzCzyParzysta(8))
+        
+        let c=100
+        pokaz()
+        document.write("c="+c)
+</script>
+</body>
+</html>

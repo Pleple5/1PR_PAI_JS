@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zad3</title>
+</head>
+<body>
+<div id="aaa">
+</div>
+
+
+    <script type="text/javascript">
+        let abc=document.getElementById("aaa")
+        for(let y=1; y<11; y++){
+            abc.innerHTML+="<img>"
+        }
+        let a = document.querySelectorAll("img");
+
+        a.forEach ((element) => {
+        element.height = Math.floor((Math.random()*100)+50);
+        element.width = Math.floor((Math.random()*100)+50);
+        element.src = "https://picsum.photos/"+Math.floor(Math.random()*200);
+
+    })
+    </script>
+</body>
+</html>

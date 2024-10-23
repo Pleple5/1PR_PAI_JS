@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>nazwa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.6">
+</head>
+<body>
+    <script>
+        let a = prompt("Wprowadź liczbę użytkowniku a:", "")
+        let b = prompt("Wprowadź liczbę użytkowniku b:", "")
+
+        let punkty_a = 0
+        let punkty_b = 0
+
+        for (let i = 0; i <= 500; 1++) {
+            let r = Math.floor(Math.random() * 99 + 1)
+            if (r == a) {
+            punkty_a++
+            }
+            if (r == b) {
+                punkty_b++
+            }
+                
+        }   
+
+        document.write("Użytkownik a ma" + punkty_a + " punktów")
+        document.write("<br>") 
+        document.write("Użytkownik b ma" + punkty_b + " punktów") 
+        document.write("<br>")
+
+        if (punkty_a == punkty_b) { 
+            document.write("Remis")
+        } else if (punkty_a > punkty_b) {
+            document.write("Gratulacje użytkowniku a, wygrałeś")
+        } else {
+            document.write("Gratulacje użytkowniku b, wygrałeś")
+        }
+</script>
+</body>
+</html>

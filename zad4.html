@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zad 4</title>
+    <style>
+        section{
+            height: 100px;
+            border: 2px black solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <script>
+        let l1 = Math.floor(Math.random()*100)
+        let l2 = Math.floor(Math.random()*100)
+        let r = Math.floor(Math.random()*255)
+        let g = Math.floor(Math.random()*255)
+        let b = Math.floor(Math.random()*255)
+        let backgroundColor = `rgb(${r}, ${g}, ${b})`
+
+        let sekcje = document.querySelectorAll("section")
+
+        sekcje[0].innerHTML = l1
+        sekcje[1].innerHTML = l2
+        sekcje[2].style.color = backgroundColor
+        sekcje[3].innerHTML = l1 + l2
+        // Na stronie mamy 4 sekcje w 1 i drugiej sekcji pojawia się liczba losowa w sekcji 4 pojawia się suma tych dwóch liczb, tło sekcje 3 losowym kolorem
+    </script>
+</body>
+</html>

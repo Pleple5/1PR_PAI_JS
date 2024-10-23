@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprawdzian</title>
+    <style>
+        section{
+            border: black 2px solid;
+            padding: 20px;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3 sekcje, w 1 sekcji input do wpisania x i input do wpisania y, klikamy w sekcje 2 i pojawia sie podaj obwod prostokąta o bokach x,y w sekcji 3 dwa obrazki (paint) klikniecie na obrazek dowolny zamiana miejscami, najechanie myszka na sekcje 1 powoduje zmiane tla na kolor losowy-->
+    <section onmouseenter="f1()">
+        <label>x:<input type="number" id="wartoscx" value="100"></label>
+        <br>
+        <label>y:<input type="number" id="wartoscy" value="200"></label>
+    </section>
+
+    <section onclick="f2()">
+    <h2 id="prostokat">Obwód prostokąta o bokach x, y wtnosi:</h2>
+    </section>
+
+    <section>
+        <img src="obraz1.png" height="200" onclick="f3()" id="zdj1">
+        <img src="obraz2.png" height="200" onclick="f3()" id="zdj2">
+    </section>
+
+    <script type="text/javascript">
+        let sekcje = document.querySelectorAll("section")
+        let zdj = document.querySelectorAll("img")
+        
+        function f1(){
+            let r = Math.floor(Math.random()*255)
+            let g = Math.floor(Math.random()*255)
+            let b = Math.floor(Math.random()*255)
+            
+            sekcje[0].style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+        }
+
+        function f2(){
+            let x = parseInt(document.getElementById("wartoscx").value)
+            let y = parseInt(document.getElementById("wartoscy").value)
+            let obwod = x + x + y + y
+            prostokat.innerHTML = "Obwód prostokąta o bokach x, y wtnosi: " + obwod
+        }
+
+        function f3(){
+            if(zdj[0].src = "obraz1.png"){
+                zdj[0].src = "obraz2.png"
+                zdj[1].src = "obraz1.png"
+            }
+            else{
+                zdj[0].src = "obraz1.png"
+                zdj[1].src = "obraz2.png" 
+            }
+        }
+    </script>
+</body>
+</html>

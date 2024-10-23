@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie</title>
+    <style>
+        section{
+            border: 2px black solid;
+            padding: 20px;
+        }
+        button{
+        height: 50px;
+        width: 100px;
+        font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <lable>Podaj liczbe a:<input type="number" id="liczbaa"></lable> <br>
+    <lable>Podaj liczbe b:<input type="number" id="liczbab"></lable> <br>
+    <br>
+    <lable>Pokaż<input type="checkbox"></lable> <br>
+    <br>
+    <lable>Najmniejsza<input type="radio" name="minmax" value="min" checked></lable> <br>
+    <lable>Największa<input type="radio" name="minmax" value="max"></lable> <br>
+    <br>
+    <button id="oblicz">Oblicz</button>
+</section>
+
+<section>
+
+</section>
+
+<script type="text/javascript">
+    let a = document.getElementById("liczbaa")
+    let b = document.getElementById("liczbab")
+    let sekcje = document.getElementById("section")
+
+    function f1() {
+        sekcje[1].innerHTML = "a"
+    }
+
+    document.getElementById('oblicz').onclick = f1
+
+</script>
+</body>
+</html>

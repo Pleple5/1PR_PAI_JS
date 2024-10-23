@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia</title>
+</head>
+<body>
+    <div>
+        Szerokosć:<input type="number" id="boka"  value="200">
+        <br>
+        Wysokość:<input type="number" id="bokb"  value="200">
+    </div>
+
+    <div>
+        <span id=kwadrat>Kwadrat</span>
+        <br>
+        <div>
+            <span id=wynik></span>
+        </div>
+        <img id="obrazek" src="https://picsum.photos/200" alt="obrazek">
+    </div>
+
+
+    <p onmouseover=f1(this) onmouseout=f2(this)>Ala ma kota</p>
+
+    <script type="text/javascript">
+        let wynik = document.getElementById("wynik")
+        let kwadrat = document.getElementById("kwadrat")
+        let obrazek = document.getElementById("obrazek")
+
+
+        document.getElementById("boka").onchange= (event) => {
+            let boka = document.getElementById("boka").value
+            let bokb = document.querySelector("#bokb").value
+            wynik.innerHTML = "Pole kwadratu o bokuv" + boka + "wynosi " + (boka * bokb) + " pole prostokąta o bockach " + boka + " i " + bokb + " wynosi " + (boka * bokb)
+        }
+        
+
+
+        kwadrat.onclick = function(event) {
+            var element=event.target
+            element.style.color="red"
+            let boka = document.getElementById("boka").value
+            let bokb = document.querySelector("#bokb").value
+            wynik.innerHTML = "Pole kwadratu o bokuv" + boka + "wynosi " + (boka * bokb) + " pole prostokąta o bockach " + boka + " i " + bokb + " wynosi " + (boka * bokb)
+        }
+        obrazek.onmosueout = (event) => {
+            obrazek.src = "https://picsum.photos/300"
+            obrazek.style.width = "500px"
+            obrazek.style.height = "500px"
+        }
+        function f1(el) {
+            el.innerHTML = "Ola ma psa"
+            el.style.fontSize = "3em"
+            el.style.color = "#ff3333"
+        }
+        function f2(el){
+            el.innerHTML = "Ala ma kota"
+            el.style.fontSize = "initial"
+            el.style.color = "black"
+        }
+    </script>
+</body>
+</html>
